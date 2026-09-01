@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  html, body, #root {
+    max-width: 100vw;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: #f8fafc; /* slate-50 */
+    color: #0f172a; /* slate-900 */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-custom {
+  animation: spin 1s linear infinite;
+}
+
+/* Make tables look clean and scrollable */
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Custom shadow glow for a premium feel */
+.shadow-glow-emerald {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.15);
+}
+
+/* ==========================================
+   Print Styles for Clean PDF Report Export
+   ========================================== */
+@media print {
+  /* Hide sidebars, navbars, buttons, search bars, inputs, modals, and safe areas */
+  nav, aside, button, input, select, .no-print, [role="button"], .fixed, .modal-overlay {
+    display: none !important;
+  }
+  
+  /* Reset background and layout for paper print */
+  html, body, #root, main, .admin-container, .admin-main {
+    background: white !important;
+    color: black !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+
+  /* Format tables for print output */
+  .table-container {
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin-top: 10px !important;
+  }
+  
+  th, td {
+    border: 1px solid #94a3b8 !important;
+    padding: 8px 12px !important;
+    color: black !important;
+    background: transparent !important;
+  }
+
+  th {
+    font-weight: bold !important;
+  }
+  
+  tr {
+    page-break-inside: avoid !important;
+  }
+
+  /* Show custom print header on printed paper only */
+  .print-header {
+    display: block !important;
+    text-align: center !important;
+    margin-bottom: 24px !important;
+    border-bottom: 2px solid #000 !important;
+    padding-bottom: 12px !important;
+  }
+  
+  .print-header h1 {
+    font-size: 20px !important;
+    font-weight: bold !important;
+    margin: 0 !important;
+  }
+  
+  .print-header p {
+    font-size: 12px !important;
+    margin: 4px 0 0 0 !important;
+    color: #334155 !important;
+  }
+}
+
+/* Hide print header by default in browser screen mode */
+.print-header {
+  display: none;
+}
