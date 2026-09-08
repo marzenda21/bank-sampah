@@ -121,16 +121,6 @@ const Login = () => {
         </form>
 
         {/* Default Account Info Box */}
-        <div className="mt-8 pt-6 border-t border-slate-100">
-          <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-4 flex gap-2.5 items-start">
-            <Info className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-            <div className="text-[11px] text-emerald-800 leading-relaxed">
-              <p className="font-bold mb-1">Default Akun Pengelola:</p>
-              <p>Email: <span className="font-semibold select-all">admin@gmail.com</span></p>
-              <p>Sandi: <span className="font-semibold select-all">123321</span></p>
-            </div>
-          </div>
-        </div>
 
       </div>
     </div>
