@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { collection, query, orderBy, limit, onSnapshot, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
 import Navbar from '../components/Navbar';
+import bgAtas from "../assets/bg_atas.png";
 import { 
   Trash2, MessageCircle, HelpCircle, BookOpen, MapPin, 
   Send, FileText, ChevronDown, Award, Sparkles, Scale, Info, CheckCircle2, Leaf, HeartHandshake, Zap, Landmark
@@ -211,31 +212,65 @@ const Home = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section id="welcome" className="relative bg-gradient-to-b from-emerald-50 to-white pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
+      <section id="welcome" className="relative bg-gradient-to-b from-emerald-50 to-white pt-10 pb-6 md:pt-18 md:pb-20 overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-40">
           <div className="absolute top-10 left-10 w-72 h-72 bg-emerald-200 rounded-full blur-3xl"></div>
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-teal-200 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mt-4 leading-tight">
-              Ubah Sampah Menjadi <br/>
-              <span className="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">Tabungan & Berkah</span>
-            </h1>
-            <p className="max-w-2xl mx-auto text-slate-600 text-base md:text-lg mt-6 leading-relaxed">
-              Selamat datang di portal informasi resmi Bank Sampah Krejengan. Bersama mewujudkan desa sehat, asri, minim plastik, serta berdaya ekonomi secara sirkular.
-            </p>
-            <div className="mt-8 flex justify-center gap-4">
-              <a href="#simulator" className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl shadow-md shadow-emerald-600/10 hover:shadow-lg transition cursor-pointer">
-                Simulasi Tabungan
-              </a>
-              <a href="#story" className="px-6 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 font-semibold rounded-xl transition cursor-pointer">
-                Lihat Cerita Warga
-              </a>
+        <div
+          className="relative overflow-hidden mb-16 min-h-[500px] md:min-h-[560px] flex items-center"
+          style={{
+            backgroundImage: `url(${bgAtas})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          {/* Overlay supaya tulisan tetap terbaca */}
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/90 via-emerald-900/70 to-emerald-900/20"></div>
+
+          {/* Konten */}
+          <div className="relative z-10 w-full px-6 py-16 md:px-12 lg:px-16">
+            <div className="max-w-2xl text-left">
+              {/* Judul */}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                Ubah Sampah Menjadi
+                <br />
+                <span className="text-emerald-300">
+                  Tabungan & Berkah
+                </span>
+              </h1>
+
+              {/* Deskripsi */}
+              <p className="max-w-xl text-emerald-50/90 text-base md:text-lg mt-6 leading-relaxed">
+                Selamat datang di portal informasi Bank Sampah Krejengan.
+                Bersama mewujudkan desa yang sehat, asri, minim plastik,
+                serta memberikan manfaat ekonomi bagi warga.
+              </p>
+
+              {/* Button */}
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a
+                  href="#simulator"
+                  className="px-6 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-white font-semibold rounded-xl shadow-lg shadow-emerald-950/20 transition-all duration-200"
+                >
+                  Simulasi Tabungan
+                </a>
+
+                <a
+                  href="#story"
+                  className="px-6 py-3.5 bg-white/10 hover:bg-white/20 border border-white/40 backdrop-blur-sm text-white font-semibold rounded-xl transition-all duration-200"
+                >
+                  Lihat Cerita Warga
+                </a>
+              </div>
+
             </div>
           </div>
+        </div>
 
+    {/* Youtube */}
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
           {/* YouTube Video + Village Profile Card */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-6">
             {/* Left side: Youtube video player */}
