@@ -219,9 +219,6 @@ const Home = () => {
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-100 border border-emerald-200 text-emerald-800 text-xs font-semibold rounded-full shadow-sm">
-              <Sparkles className="w-3.5 h-3.5 text-emerald-600" /> Program Lingkungan Desa Krejengan
-            </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mt-4 leading-tight">
               Ubah Sampah Menjadi <br/>
               <span className="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">Tabungan & Berkah</span>

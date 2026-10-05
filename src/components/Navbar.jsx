@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { Home, ClipboardList, Image, BookOpen, PhoneCall, UserCheck, ShieldAlert } from 'lucide-react';
 import { auth } from '../firebase';
 import { onAuthStateChanged } from 'firebase/auth';
+import bankSampahLogo from './assets/Bank Sampah Krejengan.png';
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -50,7 +51,7 @@ const Navbar = () => {
           className="flex items-center gap-2 cursor-pointer font-bold text-lg hover:text-emerald-400 transition"
           onClick={() => scrollToSection('#welcome')}
         >
-          <span className="text-xl">♻️</span>
+          <img src={bankSampahLogo} alt="Bank Sampah Krejengan"className="w-8 h-8 sm:w-9 sm:h-9 object-contain"/>
           <span>Bank Sampah Krejengan</span>
         </div>
         <div className="flex items-center gap-6">
