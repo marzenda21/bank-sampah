@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { Home, ClipboardList, Image, BookOpen, PhoneCall, UserCheck, ShieldAlert } from 'lucide-react';
 import { auth } from '../firebase';
 import { onAuthStateChanged } from 'firebase/auth';
-import bankSampahLogo from './assets/Bank Sampah Krejengan.png';
+import bankSampahLogo from '../assets/Bank Sampah Krejengan.png';
 
 const Navbar = () => {
   const navigate = useNavigate();
