@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar';
 import bgAtas from "../assets/bg_atas.png";
 import { 
   Trash2, MessageCircle, HelpCircle, BookOpen, MapPin, 
-  Send, FileText, ChevronDown, Award, Sparkles, Scale, Info, CheckCircle2, Leaf, HeartHandshake, Zap, Landmark
+  Send, FileText, ChevronDown, Award, Sparkles, Scale, Info, CheckCircle2, Leaf, HeartHandshake, Zap, Landmark, CircleDollarSign, FlameKindling
 } from 'lucide-react';
 
 // Custom inline SVG icons because brand icons are not exported in this Lucide version
@@ -288,7 +288,7 @@ const Home = () => {
             <div className="bg-white rounded-3xl p-8 shadow-xl border border-slate-100 flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-3xl">🏡</span>
+                  <Landmark className="w-8 h-8 text-emerald-600" strokeWidth={1.6} />
                   <h3 className="text-2xl font-bold text-slate-900">Profil Desa Krejengan</h3>
                 </div>
                 <p className="text-slate-600 text-sm md:text-base leading-relaxed mb-4">
@@ -317,7 +317,7 @@ const Home = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-emerald-900/40 border border-emerald-800 rounded-2xl p-6 text-center hover:bg-emerald-900/60 transition">
               <span className="inline-flex p-3 bg-emerald-800/60 text-emerald-400 rounded-xl mb-3">
-                <Leaf className="w-6 h-6" />
+                <Trash2 className="w-6 h-6" />
               </span>
               <h3 className="text-3xl font-extrabold">{totalWeight.toFixed(1)} <span className="text-sm font-normal text-emerald-300">kg</span></h3>
               <p className="text-xs text-emerald-200 mt-1">Total Sampah Terkumpul</p>
@@ -341,7 +341,7 @@ const Home = () => {
 
             <div className="bg-emerald-900/40 border border-emerald-800 rounded-2xl p-6 text-center hover:bg-emerald-900/60 transition">
               <span className="inline-flex p-3 bg-emerald-800/60 text-emerald-400 rounded-xl mb-3">
-                <Zap className="w-6 h-6" />
+                <FlameKindling className="w-6 h-6" />
               </span>
               <h3 className="text-3xl font-extrabold">{co2Equivalent} <span className="text-sm font-normal text-emerald-300">kg</span></h3>
               <p className="text-xs text-emerald-200 mt-1">Reduksi Emisi CO₂</p>
@@ -354,9 +354,6 @@ const Home = () => {
       <section className="py-16 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-100 border border-emerald-200 text-emerald-800 text-xs font-semibold rounded-full shadow-sm">
-              💰 Panduan Menabung
-            </span>
             <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight mt-3">
               Cara Warga Mendapatkan Uang dari Tabungan Sampah
             </h2>
