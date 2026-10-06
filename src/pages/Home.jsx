@@ -3,6 +3,10 @@ import { collection, query, orderBy, limit, onSnapshot, getDocs } from 'firebase
 import { db } from '../firebase';
 import Navbar from '../components/Navbar';
 import bgAtas from "../assets/bg_atas.png";
+import ke1 from "../assets/ke1.png";
+import ke2 from "../assets/ke2.png";
+import ke3 from "../assets/ke3.png";
+import ke4 from "../assets/ke4.png";
 import { 
   Trash2, MessageCircle, HelpCircle, BookOpen, MapPin, 
   Send, FileText, ChevronDown, Award, Sparkles, Scale, Info, CheckCircle2, Leaf, HeartHandshake, Zap, Landmark, CircleDollarSign, FlameKindling
@@ -368,6 +372,14 @@ const Home = () => {
                 1
               </div>
               <h4 className="font-bold text-slate-900 text-base mb-2">Pilah Sampah</h4>
+               {/* Gambar */}
+              <div className="w-full mb-4 flex items-center justify-center overflow-hidden rounded-xl">
+                <img
+                  src={ke1}
+                  alt="Pilah Sampah"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <p className="text-xs text-slate-500 leading-relaxed">
                 Pilah sampah kering non-organik bernilai ekonomis (plastik, kertas, logam, dll) dari rumah Anda. Bersihkan dan keringkan sebelum disetor.
               </p>
@@ -378,6 +390,13 @@ const Home = () => {
                 2
               </div>
               <h4 className="font-bold text-slate-900 text-base mb-2">Bawa ke Bank Sampah</h4>
+                <div className="w-full mb-4 flex items-center justify-center overflow-hidden rounded-xl">
+                  <img
+                    src={ke2}
+                    alt="Bawa ke Bank Sampah"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
               <p className="text-xs text-slate-500 leading-relaxed">
                 Kunjungi Sekretariat Bank Sampah di Kantor Desa Krejengan pada hari operasional dengan membawa sampah terpilah Anda.
               </p>
@@ -388,6 +407,13 @@ const Home = () => {
                 3
               </div>
               <h4 className="font-bold text-slate-900 text-base mb-2">Timbang & Catat</h4>
+              <div className="w-full mb-4 flex items-center justify-center overflow-hidden rounded-xl">
+                <img
+                  src={ke3}
+                  alt="Timbang & Catat"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <p className="text-xs text-slate-500 leading-relaxed">
                 Petugas menimbang sampah Anda. Hasil timbangan dikalikan tarif kategori sampah dan saldonya langsung tercatat secara digital.
               </p>
@@ -398,6 +424,13 @@ const Home = () => {
                 4
               </div>
               <h4 className="font-bold text-slate-900 text-base mb-2">Cairkan Rupiah</h4>
+                <div className="w-full mb-4 flex items-center justify-center overflow-hidden rounded-xl">
+                  <img
+                    src={ke4}
+                    alt="Cairkan Rupiah"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
               <p className="text-xs text-slate-500 leading-relaxed">
                 Saldo tabungan sampah Anda yang terkumpul dapat dicairkan menjadi uang tunai setiap akhir tahun sesuai keputusan mitra.
               </p>
@@ -438,7 +471,8 @@ const Home = () => {
             <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 md:p-8 shadow-lg relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-2xl"></div>
               <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
-                🧮 Hitung Tabunganmu
+                <Trash2 className="w-5 h-5 text-emerald-600" />
+                Hitung Tabunganmu
               </h3>
               <div className="space-y-4">
                 <div>
